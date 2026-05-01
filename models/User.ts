@@ -49,11 +49,10 @@ const UserSchema: Schema<IUser> = new Schema(
 
 // Remove password from JSON output
 UserSchema.set('toJSON', {
-  transform: (_doc, ret) => {
+  transform: (_doc, ret: any) => {
     delete ret.password
     return ret
   },
 })
-
 const User: Model<IUser> = mongoose.models.User || mongoose.model<IUser>('User', UserSchema)
 export default User
