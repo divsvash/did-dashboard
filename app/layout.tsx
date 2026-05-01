@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+// @ts-ignore: global CSS import handled by Next.js
 import './globals.css'
 import { Providers } from './providers'
 
