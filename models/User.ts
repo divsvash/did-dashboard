@@ -3,7 +3,7 @@ import mongoose, { Schema, Document, Model } from 'mongoose'
 export interface IUser extends Document {
   name: string
   email: string
-  password: string
+  password?: string
   walletAddress?: string
   walletVerified?: boolean
   createdAt: Date
